@@ -1,0 +1,51 @@
+{
+  "source_sha256": {
+    "orders": "ee812cda782cb10d25b5db00a86ba46167105341fec0caf288cc1771b3f2038a",
+    "order_items": "b61ea33611ef4a13797d23c7d2ec9c22ada0ca22997a2227cbda31f4f156b2ca",
+    "products": "821eee7cd8ad85a8c827066f3bdee44d8d370f0fe7caffc6b8dd555fd93d6689"
+  },
+  "rows_before": {
+    "orders": 9245,
+    "order_items": 15608,
+    "products": 90
+  },
+  "rows_after": {
+    "orders": 9207,
+    "order_items": 15608,
+    "products": 90
+  },
+  "excluded_duplicate_orders": 38,
+  "category_values_changed": 22,
+  "categories_before": 24,
+  "categories_after": 8,
+  "missing_prices": 199,
+  "missing_prices_imputed": 0,
+  "joined_item_rows": 15608,
+  "numeric_totals_after": {
+    "orders": {
+      "shipping_fee": "14219.70"
+    },
+    "products": {
+      "list_price": "12094.10",
+      "unit_cost": "6260.69"
+    },
+    "order_items": {
+      "quantity": "19429",
+      "unit_price": "1742512.71",
+      "discount_amount": "49968.88"
+    }
+  },
+  "assumptions": [
+    "IDs are text; CSV readers must specify string types to preserve this.",
+    "order_date is UTC per project documentation; exported as ISO 8601 with Z suffix.",
+    "Blank discount_code means no code recorded; it remains blank.",
+    "No revenue or status exclusions applied. Missing prices remain blank.",
+    "Numeric CSV values preserve source decimal spelling; parse explicitly on import."
+  ],
+  "cleaned_sha256": {
+    "orders": "fb74caf73a725d32f3f67bbba790141cb391771289dbadfe4871abc0897f6087",
+    "order_items": "b7f1c8aa8969252feaa4c437abb1e0cd18b2729987bcf78728aa1fa806315781",
+    "products": "36c9a0a2aa64870dcf2c8d04b2860bc7a380609116d9c7c283b50c19e79e4799"
+  },
+  "validation": "Passed: source hashes, CSV round-trips, allowed changes, numeric checks, key integrity and join counts."
+}

@@ -59,7 +59,11 @@ The notebook locates `data/` relative to the project root. Run its cells in orde
 
 ## Methodology and results
 
-Cleaning decisions and metric definitions will be documented in the notebook before analysis. Monthly comparisons will use matching periods after checking date coverage. Figures will be saved in `reports/figures/`, and `reports/summary.md` will hold the one-page summary. Findings and recommendations will also be summarized here once verified.
+Cleaning has been implemented in `scripts/clean_data.py`. Run `.\.venv\Scripts\python.exe scripts\clean_data.py` to regenerate the three cleaned CSVs and row-level change log under `data/cleaned/`. Source files are preserved. The process removes 38 exact duplicate orders, standardises categories, exports UTC timestamps and flags 199 missing item prices without estimating them. See `reports/cleaning_log.md` and `reports/cleaning_validation.json` for decisions and verification. The initial audit is reproducible with `scripts/profile_data.py`.
+
+When reading the cleaned CSVs, load ID columns as strings and parse `order_date` as UTC. `unit_price_missing` identifies unknown prices, which remain blank. All order statuses remain present; revenue eligibility and missing-price coverage must be defined before calculating sales metrics.
+
+Metric definitions will be documented before analysis. Monthly comparisons will use matching periods after checking date coverage. Figures will be saved in `reports/figures/`, and `reports/summary.md` will hold the one-page summary. Findings and recommendations will also be summarized here once verified.
 
 ## Version control
 

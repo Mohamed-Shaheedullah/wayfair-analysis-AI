@@ -1,0 +1,807 @@
+{
+  "files": {
+    "orders": {
+      "sha256": "ee812cda782cb10d25b5db00a86ba46167105341fec0caf288cc1771b3f2038a",
+      "bytes": 528251,
+      "rows": 9245,
+      "columns": [
+        "order_id",
+        "customer_id",
+        "order_date",
+        "status",
+        "payment_method",
+        "discount_code",
+        "shipping_fee"
+      ],
+      "encoding": "UTF-8 compatible",
+      "delimiter": ",",
+      "malformed_row_widths": 0,
+      "duplicate_headers": 0,
+      "exact_duplicate_excess_rows": 38,
+      "fields": {
+        "order_id": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 9207,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {
+            "104455": 2,
+            "105094": 2,
+            "104399": 2,
+            "104259": 2,
+            "107086": 2,
+            "106886": 2,
+            "103810": 2,
+            "102064": 2,
+            "104855": 2,
+            "104607": 2,
+            "100303": 2,
+            "102000": 2,
+            "103209": 2,
+            "102517": 2,
+            "104239": 2
+          },
+          "normalization_collisions": {}
+        },
+        "customer_id": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 2106,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {},
+          "normalization_collisions": {}
+        },
+        "order_date": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 9206,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "invalid_dates": 0,
+          "earliest": "2024-01-01 09:24:45",
+          "latest": "2025-12-31 23:23:29",
+          "monthly_counts": {
+            "2024-01": 288,
+            "2024-02": 294,
+            "2024-03": 326,
+            "2024-04": 317,
+            "2024-05": 339,
+            "2024-06": 328,
+            "2024-07": 352,
+            "2024-08": 320,
+            "2024-09": 288,
+            "2024-10": 332,
+            "2024-11": 560,
+            "2024-12": 482,
+            "2025-01": 334,
+            "2025-02": 330,
+            "2025-03": 387,
+            "2025-04": 399,
+            "2025-05": 405,
+            "2025-06": 410,
+            "2025-07": 376,
+            "2025-08": 411,
+            "2025-09": 370,
+            "2025-10": 412,
+            "2025-11": 672,
+            "2025-12": 513
+          }
+        },
+        "status": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 3,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {
+            "completed": 8490,
+            "returned": 409,
+            "canceled": 346
+          },
+          "normalization_collisions": {}
+        },
+        "payment_method": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 4,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {
+            "credit_card": 5332,
+            "paypal": 1959,
+            "apple_pay": 1422,
+            "gift_card": 532
+          },
+          "normalization_collisions": {}
+        },
+        "discount_code": {
+          "inferred_type": "object",
+          "blank": 7834,
+          "distinct_nonblank": 3,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {
+            "HOLIDAY20": 782,
+            "WELCOME10": 391,
+            "SPRING15": 238
+          },
+          "normalization_collisions": {}
+        },
+        "shipping_fee": {
+          "inferred_type": "float64",
+          "blank": 0,
+          "distinct_nonblank": 2,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "min": 0.0,
+          "max": 6.95,
+          "negative": 0,
+          "zero": 7190,
+          "non_integer": 2055,
+          "quantiles": {
+            "0.01": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "0.99": 6.95
+          }
+        }
+      }
+    },
+    "order_items": {
+      "sha256": "b61ea33611ef4a13797d23c7d2ec9c22ada0ca22997a2227cbda31f4f156b2ca",
+      "bytes": 355813,
+      "rows": 15608,
+      "columns": [
+        "order_id",
+        "product_id",
+        "quantity",
+        "unit_price",
+        "discount_amount"
+      ],
+      "encoding": "UTF-8 compatible",
+      "delimiter": ",",
+      "malformed_row_widths": 0,
+      "duplicate_headers": 0,
+      "exact_duplicate_excess_rows": 0,
+      "fields": {
+        "order_id": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 9207,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {
+            "101684": 4,
+            "101746": 4,
+            "101754": 4,
+            "101799": 4,
+            "101655": 4,
+            "109050": 4,
+            "109055": 4,
+            "109071": 4,
+            "109072": 4,
+            "100035": 4,
+            "100041": 4,
+            "100042": 4,
+            "100046": 4,
+            "101874": 4,
+            "101641": 4
+          },
+          "normalization_collisions": {}
+        },
+        "product_id": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 90,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {
+            "1078": 286,
+            "1072": 274,
+            "1073": 269,
+            "1079": 260,
+            "1075": 260,
+            "1080": 259,
+            "1071": 257,
+            "1074": 253,
+            "1076": 249,
+            "1077": 238,
+            "1070": 238,
+            "1006": 231,
+            "1087": 231,
+            "1081": 230,
+            "1015": 226
+          },
+          "normalization_collisions": {}
+        },
+        "quantity": {
+          "inferred_type": "int64",
+          "blank": 0,
+          "distinct_nonblank": 4,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "min": 1.0,
+          "max": 4.0,
+          "negative": 0,
+          "zero": 0,
+          "non_integer": 0,
+          "quantiles": {
+            "0.01": 1.0,
+            "0.25": 1.0,
+            "0.5": 1.0,
+            "0.75": 1.0,
+            "0.99": 4.0
+          }
+        },
+        "unit_price": {
+          "inferred_type": "float64",
+          "blank": 199,
+          "distinct_nonblank": 158,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "min": 7.99,
+          "max": 812.69,
+          "negative": 0,
+          "zero": 0,
+          "non_integer": 15409,
+          "quantiles": {
+            "0.01": 8.39,
+            "0.25": 49.99,
+            "0.5": 86.09,
+            "0.75": 141.74,
+            "0.99": 556.49
+          }
+        },
+        "discount_amount": {
+          "inferred_type": "float64",
+          "blank": 0,
+          "distinct_nonblank": 537,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "min": 0.0,
+          "max": 196.56,
+          "negative": 0,
+          "zero": 13230,
+          "non_integer": 2157,
+          "quantiles": {
+            "0.01": 0.0,
+            "0.25": 0.0,
+            "0.5": 0.0,
+            "0.75": 0.0,
+            "0.99": 51.66
+          }
+        }
+      }
+    },
+    "products": {
+      "sha256": "821eee7cd8ad85a8c827066f3bdee44d8d370f0fe7caffc6b8dd555fd93d6689",
+      "bytes": 4135,
+      "rows": 90,
+      "columns": [
+        "product_id",
+        "product_name",
+        "category",
+        "list_price",
+        "unit_cost"
+      ],
+      "encoding": "UTF-8 compatible",
+      "delimiter": ",",
+      "malformed_row_widths": 0,
+      "duplicate_headers": 0,
+      "exact_duplicate_excess_rows": 0,
+      "fields": {
+        "product_id": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 90,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {
+            "1001": 1,
+            "1002": 1,
+            "1003": 1,
+            "1004": 1,
+            "1005": 1,
+            "1006": 1,
+            "1007": 1,
+            "1008": 1,
+            "1009": 1,
+            "1010": 1,
+            "1011": 1,
+            "1012": 1,
+            "1013": 1,
+            "1014": 1,
+            "1015": 1
+          },
+          "normalization_collisions": {}
+        },
+        "product_name": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 90,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "top_values": {
+            "Brass Chef Knife": 1,
+            "Walnut Cutting Board": 1,
+            "Matte Black Dutch Oven": 1,
+            "Classic Skillet": 1,
+            "Linen Mixing Bowl Set": 1,
+            "Walnut Coffee Grinder": 1,
+            "Modern Spice Rack": 1,
+            "Matte Black Utensil Set": 1,
+            "Brass Baking Sheet": 1,
+            "Marble Tea Kettle": 1,
+            "Brass Salad Spinner": 1,
+            "Ceramic Knife Block": 1,
+            "Cotton Pour Over Kettle": 1,
+            "Matte Black Stock Pot": 1,
+            "Oak Measuring Cup Set": 1
+          },
+          "normalization_collisions": {}
+        },
+        "category": {
+          "inferred_type": "object",
+          "blank": 0,
+          "distinct_nonblank": 24,
+          "surrounding_whitespace": 9,
+          "literal_null_markers": {},
+          "top_values": {
+            "Kitchen": 10,
+            "Outdoor": 9,
+            "Furniture": 9,
+            "Bath": 9,
+            "Lighting": 8,
+            "Bedding": 8,
+            "Decor": 8,
+            "Storage": 7,
+            "decor": 4,
+            " Bedding": 2,
+            " Kitchen": 2,
+            "Storage ": 2,
+            "bedding": 1,
+            "KITCHEN": 1,
+            "Kitchen ": 1
+          },
+          "normalization_collisions": {
+            "kitchen": [
+              " Kitchen",
+              "KITCHEN",
+              "Kitchen",
+              "Kitchen ",
+              "kitchen"
+            ],
+            "bedding": [
+              " Bedding",
+              "BEDDING",
+              "Bedding",
+              "bedding"
+            ],
+            "bath": [
+              "Bath",
+              "bath"
+            ],
+            "furniture": [
+              "FURNITURE",
+              "Furniture",
+              "Furniture ",
+              "furniture"
+            ],
+            "lighting": [
+              "LIGHTING",
+              "Lighting"
+            ],
+            "outdoor": [
+              " Outdoor",
+              "OUTDOOR",
+              "Outdoor"
+            ],
+            "decor": [
+              "Decor",
+              "decor"
+            ],
+            "storage": [
+              "Storage",
+              "Storage "
+            ]
+          }
+        },
+        "list_price": {
+          "inferred_type": "float64",
+          "blank": 0,
+          "distinct_nonblank": 80,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "min": 7.99,
+          "max": 773.99,
+          "negative": 0,
+          "zero": 0,
+          "non_integer": 90,
+          "quantiles": {
+            "0.01": 9.77,
+            "0.25": 52.49,
+            "0.5": 95.49,
+            "0.75": 151.49,
+            "0.99": 578.1899999999998
+          }
+        },
+        "unit_cost": {
+          "inferred_type": "float64",
+          "blank": 0,
+          "distinct_nonblank": 90,
+          "surrounding_whitespace": 0,
+          "literal_null_markers": {},
+          "min": 4.76,
+          "max": 445.47,
+          "negative": 0,
+          "zero": 0,
+          "non_integer": 90,
+          "quantiles": {
+            "0.01": 5.7212,
+            "0.25": 24.5475,
+            "0.5": 49.275000000000006,
+            "0.75": 74.33000000000001,
+            "0.99": 325.2132
+          }
+        }
+      }
+    }
+  },
+  "joins": {
+    "orders_to_items": {
+      "parent_duplicate_key_excess": 38,
+      "parent_blank_keys": 0,
+      "child_blank_keys": 0,
+      "unmatched_child_rows": 0,
+      "unmatched_child_ids": [],
+      "unused_parent_rows": 0,
+      "unused_parent_ids": [],
+      "child_rows_before": 15608,
+      "left_join_rows_after": 15668
+    },
+    "products_to_items": {
+      "parent_duplicate_key_excess": 0,
+      "parent_blank_keys": 0,
+      "child_blank_keys": 0,
+      "unmatched_child_rows": 0,
+      "unmatched_child_ids": [],
+      "unused_parent_rows": 0,
+      "unused_parent_ids": [],
+      "child_rows_before": 15608,
+      "left_join_rows_after": 15608
+    }
+  },
+  "diagnostics": {
+    "repeated_order_product_pairs": 0,
+    "rows_in_repeated_pairs": 0,
+    "exact_duplicate_item_rows_including_first": 0,
+    "missing_unit_price_rows": 199,
+    "missing_price_quantity": 259.0,
+    "missing_prices_by_status": {
+      "completed": 176,
+      "returned": 13,
+      "canceled": 10
+    },
+    "missing_prices_by_month": {
+      "2024-01": 4,
+      "2024-02": 5,
+      "2024-03": 5,
+      "2024-04": 8,
+      "2024-05": 6,
+      "2024-06": 4,
+      "2024-07": 8,
+      "2024-08": 7,
+      "2024-09": 2,
+      "2024-10": 9,
+      "2024-11": 12,
+      "2024-12": 11,
+      "2025-01": 10,
+      "2025-02": 9,
+      "2025-03": 8,
+      "2025-04": 8,
+      "2025-05": 10,
+      "2025-06": 7,
+      "2025-07": 12,
+      "2025-08": 8,
+      "2025-09": 5,
+      "2025-10": 7,
+      "2025-11": 24,
+      "2025-12": 10
+    },
+    "missing_prices_by_product": {
+      "1070": 8,
+      "1015": 5,
+      "1060": 5,
+      "1074": 5,
+      "1006": 5,
+      "1087": 5,
+      "1088": 4,
+      "1053": 4,
+      "1029": 4,
+      "1076": 4,
+      "1014": 4,
+      "1020": 4,
+      "1085": 4,
+      "1090": 4,
+      "1054": 4,
+      "1009": 4,
+      "1079": 4,
+      "1068": 4,
+      "1072": 3,
+      "1069": 3,
+      "1077": 3,
+      "1002": 3,
+      "1010": 3,
+      "1032": 3,
+      "1063": 3,
+      "1089": 3,
+      "1012": 3,
+      "1075": 3,
+      "1030": 3,
+      "1013": 3,
+      "1066": 3,
+      "1022": 3,
+      "1078": 3,
+      "1028": 3,
+      "1058": 3,
+      "1086": 2,
+      "1037": 2,
+      "1041": 2,
+      "1027": 2,
+      "1004": 2,
+      "1042": 2,
+      "1003": 2,
+      "1026": 2,
+      "1024": 2,
+      "1039": 2,
+      "1017": 2,
+      "1007": 2,
+      "1051": 2,
+      "1081": 2,
+      "1080": 2,
+      "1048": 2,
+      "1083": 2,
+      "1005": 2,
+      "1016": 2,
+      "1082": 2,
+      "1018": 2,
+      "1071": 2,
+      "1052": 2,
+      "1084": 2,
+      "1045": 1,
+      "1050": 1,
+      "1059": 1,
+      "1038": 1,
+      "1033": 1,
+      "1023": 1,
+      "1021": 1,
+      "1008": 1,
+      "1031": 1,
+      "1035": 1,
+      "1034": 1,
+      "1057": 1,
+      "1056": 1,
+      "1019": 1,
+      "1043": 1,
+      "1064": 1,
+      "1044": 1,
+      "1067": 1,
+      "1001": 1
+    },
+    "missing_prices_by_category": {
+      "Kitchen": 30,
+      "Decor": 27,
+      "Storage": 22,
+      "Outdoor": 17,
+      "Lighting": 16,
+      "Bath": 16,
+      "Bedding": 13,
+      "decor": 12,
+      "Furniture": 8,
+      "Storage ": 6,
+      " Kitchen": 5,
+      "bedding": 4,
+      " Outdoor": 4,
+      "KITCHEN": 3,
+      " Bedding": 3,
+      "bath": 3,
+      "Furniture ": 2,
+      "BEDDING": 2,
+      "LIGHTING": 2,
+      "Kitchen ": 2,
+      "FURNITURE": 1,
+      "furniture": 1
+    },
+    "known_prices_different_from_list": 8273,
+    "products_with_multiple_transaction_prices": 90,
+    "nonpositive_quantity": 0,
+    "fractional_quantity": 0,
+    "discount_above_known_line_gross": 0,
+    "negative_known_line_net": 0,
+    "unit_cost_above_list_price": 0,
+    "missing_price_rates_by_status": {
+      "canceled": {
+        "sum": 10,
+        "count": 559,
+        "mean": 0.017889087656529516
+      },
+      "completed": {
+        "sum": 176,
+        "count": 14283,
+        "mean": 0.01232234124483652
+      },
+      "returned": {
+        "sum": 13,
+        "count": 766,
+        "mean": 0.016971279373368148
+      }
+    },
+    "missing_price_rates_by_month": {
+      "2024-01": {
+        "sum": 4,
+        "count": 489,
+        "mean": 0.0081799591002045
+      },
+      "2024-02": {
+        "sum": 5,
+        "count": 530,
+        "mean": 0.009433962264150943
+      },
+      "2024-03": {
+        "sum": 5,
+        "count": 570,
+        "mean": 0.008771929824561403
+      },
+      "2024-04": {
+        "sum": 8,
+        "count": 530,
+        "mean": 0.01509433962264151
+      },
+      "2024-05": {
+        "sum": 6,
+        "count": 601,
+        "mean": 0.009983361064891847
+      },
+      "2024-06": {
+        "sum": 4,
+        "count": 540,
+        "mean": 0.007407407407407408
+      },
+      "2024-07": {
+        "sum": 8,
+        "count": 590,
+        "mean": 0.013559322033898305
+      },
+      "2024-08": {
+        "sum": 7,
+        "count": 523,
+        "mean": 0.01338432122370937
+      },
+      "2024-09": {
+        "sum": 2,
+        "count": 519,
+        "mean": 0.0038535645472061657
+      },
+      "2024-10": {
+        "sum": 9,
+        "count": 561,
+        "mean": 0.016042780748663103
+      },
+      "2024-11": {
+        "sum": 12,
+        "count": 949,
+        "mean": 0.012644889357218124
+      },
+      "2024-12": {
+        "sum": 11,
+        "count": 815,
+        "mean": 0.013496932515337423
+      },
+      "2025-01": {
+        "sum": 10,
+        "count": 568,
+        "mean": 0.017605633802816902
+      },
+      "2025-02": {
+        "sum": 9,
+        "count": 530,
+        "mean": 0.016981132075471698
+      },
+      "2025-03": {
+        "sum": 8,
+        "count": 657,
+        "mean": 0.0121765601217656
+      },
+      "2025-04": {
+        "sum": 8,
+        "count": 680,
+        "mean": 0.011764705882352941
+      },
+      "2025-05": {
+        "sum": 10,
+        "count": 698,
+        "mean": 0.014326647564469915
+      },
+      "2025-06": {
+        "sum": 7,
+        "count": 689,
+        "mean": 0.010159651669085631
+      },
+      "2025-07": {
+        "sum": 12,
+        "count": 624,
+        "mean": 0.019230769230769232
+      },
+      "2025-08": {
+        "sum": 8,
+        "count": 680,
+        "mean": 0.011764705882352941
+      },
+      "2025-09": {
+        "sum": 5,
+        "count": 598,
+        "mean": 0.008361204013377926
+      },
+      "2025-10": {
+        "sum": 7,
+        "count": 679,
+        "mean": 0.010309278350515464
+      },
+      "2025-11": {
+        "sum": 24,
+        "count": 1151,
+        "mean": 0.020851433536055605
+      },
+      "2025-12": {
+        "sum": 10,
+        "count": 837,
+        "mean": 0.011947431302270013
+      }
+    },
+    "missing_price_rates_by_category_normalized": {
+      "bath": {
+        "sum": 19,
+        "count": 1740,
+        "mean": 0.010919540229885057
+      },
+      "bedding": {
+        "sum": 22,
+        "count": 1932,
+        "mean": 0.011387163561076604
+      },
+      "decor": {
+        "sum": 39,
+        "count": 3073,
+        "mean": 0.01269118125610153
+      },
+      "furniture": {
+        "sum": 12,
+        "count": 1045,
+        "mean": 0.011483253588516746
+      },
+      "kitchen": {
+        "sum": 40,
+        "count": 3195,
+        "mean": 0.012519561815336464
+      },
+      "lighting": {
+        "sum": 18,
+        "count": 1295,
+        "mean": 0.013899613899613899
+      },
+      "outdoor": {
+        "sum": 21,
+        "count": 1476,
+        "mean": 0.014227642276422764
+      },
+      "storage": {
+        "sum": 28,
+        "count": 1852,
+        "mean": 0.01511879049676026
+      }
+    }
+  }
+}
