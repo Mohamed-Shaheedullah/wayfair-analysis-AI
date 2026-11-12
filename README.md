@@ -63,7 +63,11 @@ Cleaning has been implemented in `scripts/clean_data.py`. Run `.\.venv\Scripts\p
 
 When reading the cleaned CSVs, load ID columns as strings and parse `order_date` as UTC. `unit_price_missing` identifies unknown prices, which remain blank. All order statuses remain present; revenue eligibility and missing-price coverage must be defined before calculating sales metrics.
 
-Metric definitions will be documented before analysis. Monthly comparisons will use matching periods after checking date coverage. Figures will be saved in `reports/figures/`, and `reports/summary.md` will hold the one-page summary. Findings and recommendations will also be summarized here once verified.
+Initial metric definitions and calculations are complete in `reports/metrics.md`, with machine-readable results in `reports/metrics_results.json`. Run `.\.venv\Scripts\python.exe scripts\calculate_metrics.py` to reproduce them from the validated cleaned files. Money is calculated in integer cents. Detailed order and annual exports go to `data/metrics/` (ignored by Git).
+
+For 2024–2025, known-price completed-order merchandise revenue is $1,858,121.00, completed orders total 8,456, and completed units total 17,775. Completed-order shipping income is $13,135.50, reported separately. Revenue omits 176 missing-price lines across 174 completed orders; it is not a complete revenue total. AOV is $221.36 across the 8,282 fully priced completed orders. Cancellation and return rates are 3.74% and 4.42% of all 9,207 distinct orders. Returned orders are treated as fully refunded and excluded, as are canceled orders.
+
+Monthly comparisons will use matching periods after checking date coverage. Figures will be saved in `reports/figures/`, and `reports/summary.md` will hold the one-page summary. Monthly, category and product analysis, charts, findings and recommendations remain later stages; the notebook is still an outline.
 
 ## Version control
 

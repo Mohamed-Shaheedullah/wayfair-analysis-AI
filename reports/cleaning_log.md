@@ -34,4 +34,10 @@ The row-level file data/cleaned/cleaning_changes.csv records each excluded order
 
 Reproduce cleaning with `.\.venv\Scripts\python.exe scripts\clean_data.py`. This regenerates the three cleaned CSVs, row-level change log and validation manifest from the originals. The original profiling reports remain a record of the pre-cleaning data.
 
+## Metric decisions agreed 2026-11-12
+
+C009 resolved for the initial metrics: completed orders contribute merchandise revenue, units and shipping income; canceled and returned orders are excluded from those metrics. Returned status is assumed to mean a full merchandise return/refund. Cancellation and return rates each use all distinct orders placed as the denominator. Shipping charged to customers is separate income, counted once per completed order.
+
+C003 remains a known data limitation: no prices are estimated. Merchandise revenue uses known-price completed lines with coverage disclosed. AOV uses only completed orders with every line priced, with matching revenue and order populations. Completed order counts, units and shipping retain missing-price orders. See `reports/metrics.md` for full definitions and results and `scripts/calculate_metrics.py` for reproduction. No further cleaning changes were made.
+
 Rerun the audit from the project root with `.\.venv\Scripts\python.exe scripts\profile_data.py`. Outputs are regenerated from the current source files. This log documents this audit and should be extended when cleaning is implemented.

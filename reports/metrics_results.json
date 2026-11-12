@@ -1,0 +1,73 @@
+{
+  "cleaned_sha256": {
+    "orders": "fb74caf73a725d32f3f67bbba790141cb391771289dbadfe4871abc0897f6087",
+    "order_items": "b7f1c8aa8969252feaa4c437abb1e0cd18b2729987bcf78728aa1fa806315781",
+    "products": "36c9a0a2aa64870dcf2c8d04b2860bc7a380609116d9c7c283b50c19e79e4799"
+  },
+  "overall": {
+    "all_orders": 9207,
+    "completed_orders": 8456,
+    "canceled_orders": 344,
+    "returned_orders": 407,
+    "cancellation_rate": 0.037362876072553494,
+    "return_rate": 0.04420549581839905,
+    "completed_units_sold": 17775,
+    "known_price_merchandise_revenue_usd": "1858121.00",
+    "completed_shipping_income_usd": "13135.50",
+    "completed_item_lines": 14283,
+    "completed_known_price_lines": 14107,
+    "completed_missing_price_lines": 176,
+    "completed_missing_price_units": 230,
+    "completed_line_price_coverage": 0.9876776587551634,
+    "completed_orders_with_all_prices": 8282,
+    "completed_orders_with_missing_prices": 174,
+    "completed_order_price_coverage": 0.9794228949858089,
+    "fully_priced_completed_order_revenue_usd": "1833343.28",
+    "aov_fully_priced_completed_orders_usd": "221.36"
+  },
+  "annual": {
+    "2024": {
+      "all_orders": 4212,
+      "completed_orders": 3867,
+      "canceled_orders": 160,
+      "returned_orders": 185,
+      "cancellation_rate": 0.03798670465337132,
+      "return_rate": 0.04392212725546059,
+      "completed_units_sold": 8215,
+      "known_price_merchandise_revenue_usd": "841136.33",
+      "completed_shipping_income_usd": "6067.35",
+      "completed_item_lines": 6603,
+      "completed_known_price_lines": 6532,
+      "completed_missing_price_lines": 71,
+      "completed_missing_price_units": 93,
+      "completed_line_price_coverage": 0.989247311827957,
+      "completed_orders_with_all_prices": 3798,
+      "completed_orders_with_missing_prices": 69,
+      "completed_order_price_coverage": 0.9821567106283942,
+      "fully_priced_completed_order_revenue_usd": "831807.35",
+      "aov_fully_priced_completed_orders_usd": "219.01"
+    },
+    "2025": {
+      "all_orders": 4995,
+      "completed_orders": 4589,
+      "canceled_orders": 184,
+      "returned_orders": 222,
+      "cancellation_rate": 0.036836836836836834,
+      "return_rate": 0.044444444444444446,
+      "completed_units_sold": 9560,
+      "known_price_merchandise_revenue_usd": "1016984.67",
+      "completed_shipping_income_usd": "7068.15",
+      "completed_item_lines": 7680,
+      "completed_known_price_lines": 7575,
+      "completed_missing_price_lines": 105,
+      "completed_missing_price_units": 137,
+      "completed_line_price_coverage": 0.986328125,
+      "completed_orders_with_all_prices": 4484,
+      "completed_orders_with_missing_prices": 105,
+      "completed_order_price_coverage": 0.9771191980823709,
+      "fully_priced_completed_order_revenue_usd": "1001535.93",
+      "aov_fully_priced_completed_orders_usd": "223.36"
+    }
+  },
+  "validation": "Passed: cleaned file hashes, join cardinality, line/order revenue, status counts, annual counts and monetary reconciliations."
+}
