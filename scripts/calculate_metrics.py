@@ -66,7 +66,8 @@ def summarize(orders):
     }
 
 
-def main():
+def prepare_orders():
+    """Read verified cleaned inputs and return order metrics without writing files."""
     manifest = json.loads((ROOT / 'reports/cleaning_validation.json').read_text())
     hashes = {}
     tables = {}
@@ -104,7 +105,11 @@ def main():
     orders['order_date'] = pd.to_datetime(orders.order_date, utc=True, errors='raise')
     orders['year'] = orders.order_date.dt.year
     orders['complete_revenue_cents'] = orders.known_revenue_cents.where(orders.price_complete)
+    return orders, items, hashes
 
+
+def main():
+    orders, items, hashes = prepare_orders()
     overall = summarize(orders)
     annual = {str(year): summarize(group) for year, group in orders.groupby('year')}
     money_fields = ('known_price_merchandise_revenue_usd', 'completed_shipping_income_usd',
@@ -188,7 +193,7 @@ Detailed order calculations and annual exports are under `data/metrics/` (exclud
 Machine-readable totals, input hashes and validation results are in `reports/metrics_results.json`.
 Validation passed for cleaned-file hashes, joins, line-to-order revenue, status counts, and annual-to-overall counts and money. AOV is recomputed from its matching numerator and denominator for each period, not averaged across years.
 
-These are initial metric calculations. Monthly comparisons, category/product analysis, charts and final recommendations remain later steps.
+These are initial metric calculations. See reports/monthly_revenue.md for the separate monthly comparison. Category/product analysis and final recommendations remain later steps.
 '''
     (ROOT / 'reports/metrics.md').write_text(definitions + '\n'.join(lines) + ending, encoding='utf-8')
     print(json.dumps(result, indent=2))

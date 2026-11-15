@@ -55,7 +55,7 @@ python -m venv .venv
 
 Open `notebooks/ecommerce_analysis.ipynb` and select the Python kernel associated with `.venv`. In VS Code, select `.venv\Scripts\python.exe` as the notebook interpreter. Activating the environment is optional because the commands above use its executable directly.
 
-The notebook locates `data/` relative to the project root. Run its cells in order. Setup currently includes an empty notebook outline; analysis and results will be added in later stages.
+The notebook locates the project root from the root or notebooks directory. Section 3 runs and displays the monthly comparison using the shared scripts. Run its code cells in order. Later analysis sections remain an outline.
 
 ## Methodology and results
 
@@ -67,7 +67,9 @@ Initial metric definitions and calculations are complete in `reports/metrics.md`
 
 For 2024–2025, known-price completed-order merchandise revenue is $1,858,121.00, completed orders total 8,456, and completed units total 17,775. Completed-order shipping income is $13,135.50, reported separately. Revenue omits 176 missing-price lines across 174 completed orders; it is not a complete revenue total. AOV is $221.36 across the 8,282 fully priced completed orders. Cancellation and return rates are 3.74% and 4.42% of all 9,207 distinct orders. Returned orders are treated as fully refunded and excluded, as are canceled orders.
 
-Monthly comparisons will use matching periods after checking date coverage. Figures will be saved in `reports/figures/`, and `reports/summary.md` will hold the one-page summary. Monthly, category and product analysis, charts, findings and recommendations remain later stages; the notebook is still an outline.
+Point 3 is complete: run `.\.venv\Scripts\python.exe scripts\compare_monthly_revenue.py` after the initial metrics script. See `reports/monthly_revenue.md` for matching-month revenue, YoY changes, completed orders, AOV and price coverage; aggregate CSV/JSON exports are alongside it. The revenue line chart is `reports/figures/monthly_revenue.png`. All 24 months are present and monthly totals reconcile exactly with existing annual and overall results.
+
+Known-price revenue rose 20.91% in 2025 and exceeded 2024 in every matching month. November was the highest revenue month in both years, suggesting a possible recurring peak rather than established seasonality. Monthly completed-line price coverage ranges from 97.81% to 99.78%; comparisons remain incomplete because selling prices are missing. Category/product analysis, remaining charts and the final one-page summary are later steps.
 
 ## Version control
 

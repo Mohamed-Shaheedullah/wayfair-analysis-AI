@@ -42,4 +42,4 @@ Detailed order calculations and annual exports are under `data/metrics/` (exclud
 Machine-readable totals, input hashes and validation results are in `reports/metrics_results.json`.
 Validation passed for cleaned-file hashes, joins, line-to-order revenue, status counts, and annual-to-overall counts and money. AOV is recomputed from its matching numerator and denominator for each period, not averaged across years.
 
-These are initial metric calculations. Monthly comparisons, category/product analysis, charts and final recommendations remain later steps.
+These are initial metric calculations. See reports/monthly_revenue.md for the separate monthly comparison. Category/product analysis and final recommendations remain later steps.
