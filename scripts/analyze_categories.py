@@ -264,8 +264,7 @@ def main():
              'monthly_category_mix.csv, product_rankings.csv and category_results.json. '
              'Shares/coverage in CSV and JSON are fractions (0.10 means 10%). '
              'Missing-only revenue remains unknown; an absent category/month receives zero revenue and units '
-             'and undefined line coverage. Detailed records stay under ignored data/. '
-             'Category outcomes and the final summary remain separate later steps.', '']
+             'and undefined line coverage. Detailed records stay under ignored data/.', '']
     (reports / 'category_analysis.md').write_text('\n'.join(text), encoding='utf-8')
     print('\n'.join(findings))
     print(validation)

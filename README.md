@@ -55,7 +55,7 @@ python -m venv .venv
 
 Open `notebooks/ecommerce_analysis.ipynb` and select the Python kernel associated with `.venv`. In VS Code, select `.venv\Scripts\python.exe` as the notebook interpreter. Activating the environment is optional because the commands above use its executable directly.
 
-The notebook locates the project root from the root or notebooks directory. Sections 3 and 4 run and display the monthly and category/product analyses using the shared scripts. Run their code cells in order. Later analysis sections remain an outline.
+The notebook locates the project root from the root or notebooks directory. Sections 3–5 run and display the monthly, category/product, and category outcomes analyses using the shared scripts. Run their code cells in order.
 
 ## Methodology and results
 
@@ -69,11 +69,13 @@ For 2024–2025, known-price completed-order merchandise revenue is $1,858,121.0
 
 Point 3 is complete: run `.\.venv\Scripts\python.exe scripts\compare_monthly_revenue.py` after the initial metrics script. See `reports/monthly_revenue.md` for matching-month revenue, YoY changes, completed orders, AOV and price coverage; aggregate CSV/JSON exports are alongside it. The revenue line chart is `reports/figures/monthly_revenue.png`. All 24 months are present and monthly totals reconcile exactly with existing annual and overall results.
 
-Known-price revenue rose 20.91% in 2025 and exceeded 2024 in every matching month. November was the highest revenue month in both years, suggesting a possible recurring peak rather than established seasonality. Monthly completed-line price coverage ranges from 97.81% to 99.78%; comparisons remain incomplete because selling prices are missing. Category outcomes and the final one-page summary remain later steps.
+Known-price revenue rose 20.91% in 2025 and exceeded 2024 in every matching month. November was the highest revenue month in both years, suggesting a possible recurring peak rather than established seasonality. Monthly completed-line price coverage ranges from 97.81% to 99.78%; comparisons remain incomplete because selling prices are missing.
 
 Point 4 is complete: run `.\.venv\Scripts\python.exe scripts\analyze_categories.py` after points 1-3. See [the category and product report](reports/category_analysis.md) for category revenue and share by year, a combined top-10 product ranking, category price coverage, and monthly mix. Three charts are saved under `reports/figures/`: `category_revenue.png`, `top_products.png`, and `monthly_category_mix.png`. Supporting aggregate CSVs and `category_results.json` are under `reports/`. Section 4 of the notebook reproduces and displays these results. Category and product totals reconcile with the existing annual and all 24 monthly baselines.
 
 Furniture leads combined known-price revenue at $318,593.13 (17.15%). Nordic Ornament Set (ID 1078) leads completed quantity with 355 units. Missing selling prices still limit revenue comparisons; product quantity rankings include all completed units.
+
+Point 5 is complete. Run `.\.venv\Scripts\python.exe scripts\analyze_category_outcomes.py` after point 4 or run sections 3–5 of the notebook. The [category outcomes report](reports/category_outcomes.md) includes the combined 2024–2025 rates, order counts, category AOV, price coverage, and a two-panel chart. The aggregate results are in [category_outcomes.csv](reports/category_outcomes.csv).
 
 ## Version control
 

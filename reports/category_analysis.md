@@ -90,4 +90,4 @@ Run `.\.venv\Scripts\python.exe scripts\analyze_categories.py` after points 1–
 
 Passed: cleaned hashes and baseline metrics; joins preserve item rows; category, product, annual and all 24 monthly revenues, units and missing-price counts reconcile; category totals reconcile across views; monthly shares sum to 100%.
 
-Aggregate exports: category_revenue_annual.csv, category_revenue_overall.csv, monthly_category_mix.csv, product_rankings.csv and category_results.json. Shares/coverage in CSV and JSON are fractions (0.10 means 10%). Missing-only revenue remains unknown; an absent category/month receives zero revenue and units and undefined line coverage. Detailed records stay under ignored data/. Category outcomes and the final summary remain separate later steps.
+Aggregate exports: category_revenue_annual.csv, category_revenue_overall.csv, monthly_category_mix.csv, product_rankings.csv and category_results.json. Shares/coverage in CSV and JSON are fractions (0.10 means 10%). Missing-only revenue remains unknown; an absent category/month receives zero revenue and units and undefined line coverage. Detailed records stay under ignored data/.
